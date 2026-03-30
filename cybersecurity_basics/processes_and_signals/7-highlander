@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Highlander: ignores SIGTERM
-trap "echo \"I am invincible!\"" SIGTERM
+# Highlander script that handles SIGTERM
+trap "echo I am invincible!!!" SIGTERM
 while true; do
     echo "To infinity and beyond"
     sleep 2
