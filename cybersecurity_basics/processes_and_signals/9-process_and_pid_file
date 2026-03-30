@@ -7,5 +7,6 @@ trap "echo Y u no love me?!" SIGINT
 
 while true; do
     echo "To infinity and beyond"
-    sleep 2
+    sleep 2 &
+    wait $!
 done
