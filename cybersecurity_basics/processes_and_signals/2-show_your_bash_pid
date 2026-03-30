@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Displays only processes containing the word bash
+ps aux | grep bash
