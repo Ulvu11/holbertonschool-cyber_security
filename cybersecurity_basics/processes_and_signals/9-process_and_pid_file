@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
 # Script that manages PID file and multiple signals
+
+# Write PID to file
 echo "$$" > /tmp/myscript.pid
 
-trap "echo I hate the kill command; rm /tmp/myscript.pid; exit" SIGTERM SIGQUIT
-trap "echo Y u no love me?!" SIGINT
+# Trap SIGINT to display specific message
+trap "echo 'Y U no love me?!'" SIGINT
+
+# Trap SIGTERM and SIGQUIT to clean up and exit
+trap "echo 'I hate the kill command'; rm /tmp/myscript.pid; exit" SIGTERM SIGQUIT
 
 while true; do
     echo "To infinity and beyond"
