@@ -1,2 +1,2 @@
 #!/bin/bash
-ps -u "$1" u | grep -v "0      0"
+ssh-keygen -t rsa -b 4096 -f "$1" -N ""
