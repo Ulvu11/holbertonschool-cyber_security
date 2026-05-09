@@ -1,2 +1,2 @@
 #!/bin/bash
-ps -u "$1" u | awk '$5 != 0 || $6 != 0'
+ps -u "$1" u | grep -v "0      0"
