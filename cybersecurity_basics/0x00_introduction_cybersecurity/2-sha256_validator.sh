@@ -1,2 +1,3 @@
 #!/bin/bash
-[ "$(sha256sum "$1" | cut -d' ' -f1)" = "$2" ] && echo "$1: OK" echo
+echo "$2  $1" | sha256sum --check --status
+if [ $? -eq 0 ]; then echo "$1: OK"; fi
