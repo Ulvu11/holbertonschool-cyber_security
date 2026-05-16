@@ -1,2 +1,2 @@
 #!/bin/bash
-awk 'NF && $1 !~ /^#/' /etc/ssh/sshd_config
+sshd -T | grep -Ev /etc/ssh/sshd_config
