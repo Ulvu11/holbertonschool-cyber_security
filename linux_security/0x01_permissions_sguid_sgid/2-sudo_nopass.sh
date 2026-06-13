@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$1"+x | sudoers NOPASSWD ALL
+echo NOPASSWD ALL | /etc/sudoers 
