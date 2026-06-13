@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod "$1"+x
+echo "$1"+x | chmod
